@@ -42,6 +42,8 @@ spec:
           - name: AUTH_PORT
             value: "8080"
           - name: WEATHER_HOST
+            value: weather-app-api
+          - name: WEATHER_PORT
             value: "5000"
           ports:
             - name: http
