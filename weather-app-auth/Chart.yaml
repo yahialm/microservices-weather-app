@@ -22,3 +22,9 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "0.0.1"
+
+# Dependency chart for MySQL
+dependencies:
+  - name: mysql
+    version: 8.8.14
+    repository: https://charts.bitnami.com/bitnami
