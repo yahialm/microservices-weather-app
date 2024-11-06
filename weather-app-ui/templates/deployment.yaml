@@ -36,6 +36,13 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: AUTH_HOST
+            value: weather-app-auth
+          - name: AUTH_PORT
+            value: "8080"
+          - name: WEATHER_HOST
+            value: "5000"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
