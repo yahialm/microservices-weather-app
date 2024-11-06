@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   auth:
-    restart: always
+    restart: always # Auth service fails multiple times since it starts before the db starts, tha's why restart: always so we can restart it each time it fails until it gets connected to db 
     build: ./auth
     depends_on:
       - db
